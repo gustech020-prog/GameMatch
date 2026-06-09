@@ -1,26 +1,40 @@
 # GameMatch
 
-GameMatch e uma aplicacao web para descobrir jogos em formato de swipe, salvar favoritos e encontrar matches em grupo. A ideia e transformar a escolha de jogos em uma experiencia rapida, visual e compartilhavel.
+GameMatch é uma aplicação web para descobrir jogos por swipe, salvar favoritos e encontrar matches em grupo. A proposta é transformar a escolha de jogos em uma experiência rápida, visual e compartilhável.
 
-Demo: https://gamematch-one.vercel.app
+**Demo:** [gamematch-one.vercel.app](https://gamematch-one.vercel.app)
+
+## Por que existe
+
+Escolher um jogo em grupo costuma virar uma conversa longa, cheia de sugestões soltas. O GameMatch organiza essa decisão em uma dinâmica simples: cada pessoa curte ou passa jogos, o sistema registra preferências e ajuda o grupo a encontrar opções em comum.
 
 ## Funcionalidades
 
-- Swipe para curtir ou passar jogos.
-- Busca e filtros de descoberta.
-- Lista de jogos curtidos.
-- Salas para rodada em grupo e comparacao de matches.
-- Compartilhamento de jogos e historico de salas.
-- Interface responsiva com animacoes e suporte mobile.
+- Descoberta de jogos em cards com interação de swipe.
+- Busca e filtros para explorar títulos.
+- Lista de jogos curtidos e histórico de escolhas.
+- Salas em grupo para comparar preferências.
+- Compartilhamento de jogos e resultado dos matches.
+- Autenticação e persistência de dados com Firebase.
+- Interface responsiva com foco em uso mobile.
 
 ## Stack
 
 - React
 - Vite
-- Firebase/Auth/Firestore
+- Firebase Auth
+- Firestore
 - RAWG API
 - Vitest
 - Vercel
+
+## Destaques técnicos
+
+- Componentização da interface para manter cards, listas, salas e estados isolados.
+- Integração com API externa de jogos para alimentar a descoberta.
+- Persistência de favoritos e salas usando Firebase.
+- Fluxo preparado para uso individual e colaboração em grupo.
+- Build e deploy configurados para Vercel.
 
 ## Desenvolvimento
 
@@ -35,9 +49,17 @@ npm run dev
 npm run build
 npm run test
 npm run lint
+npm run format:check
 ```
 
-## Variaveis de ambiente
+## Variáveis de ambiente
 
 Use `.env.example` como base para configurar Firebase e RAWG API no ambiente local.
 
+```bash
+cp .env.example .env.local
+```
+
+## Status
+
+Projeto público de portfólio, com versão online e estrutura pronta para evoluir com novos filtros, ranking de matches e melhorias de onboarding.
